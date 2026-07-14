@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            padding-top:70px;
+            padding-bottom:70px;
+        }
+
+        /* Fixed Header */
+
+        nav{
+            background:#0d6efd;
+            color:white;
+            padding:15px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+        }
+
+        nav h2{
+            color:white;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+        }
+
+        nav ul li{
+            margin-left:20px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav ul li a:hover{
+            color:yellow;
+        }
+
+        /* Contact Box */
+
+        .container{
+            width:450px;
+            margin:50px auto;
+            background:white;
+            padding:35px;
+            border-radius:10px;
+            box-shadow:0 0 15px gray;
+        }
+
+        h1{
+            text-align:center;
+            color:#0d6efd;
+            margin-bottom:30px;
+        }
+
+        input,
+        textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#0d6efd;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:18px;
+        }
+
+        button:hover{
+            background:#0047b3;
+        }
+
+        .back{
+            display:block;
+            text-align:center;
+            margin-top:20px;
+            text-decoration:none;
+            color:#0d6efd;
+        }
+
+        /* Fixed Footer */
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:20px;
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>Django App</h2>
+
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+
+</nav>
+
+<div class="container">
+
+    <h1>Contact Us</h1>
+
+    <form>
+
+        <input type="text" placeholder="Enter Name">
+
+        <input type="email" placeholder="Enter Email">
+
+        <textarea rows="5" placeholder="Enter Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+    <a href="{% url 'home' %}" class="back">Back to Home</a>
+
+</div>
+
+<footer>
+
+    <h3>© 2026 Django Project | Made by Anjali</h3>
+
+</footer>
+
+</body>
+</html>
