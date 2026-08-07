@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>About</title>
 
     <style>
@@ -9,19 +11,19 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Arial, sans-serif;
+            font-family:Arial,sans-serif;
         }
 
         body{
-            background:#eef3ff;
-            padding-top:70px;
-            padding-bottom:70px;
+            background:#fffdf2;
+            padding-top:80px;
+            padding-bottom:80px;
         }
 
-        /* Header */
+        /* Navbar */
 
         nav{
-            background:#0d6efd;
+            background:#f7d774;
             padding:15px 60px;
             display:flex;
             justify-content:space-between;
@@ -30,11 +32,11 @@
             top:0;
             left:0;
             width:100%;
-            z-index:1000;
+            box-shadow:0 3px 10px rgba(0,0,0,.15);
         }
 
         nav h2{
-            color:white;
+            color:#5d4037;
         }
 
         nav ul{
@@ -43,68 +45,80 @@
         }
 
         nav ul li{
-            margin-left:20px;
+            margin-left:25px;
         }
 
         nav ul li a{
-            color:white;
+            color:#5d4037;
             text-decoration:none;
             font-weight:bold;
+            transition:.3s;
         }
 
         nav ul li a:hover{
-            color:yellow;
+            color:#d97706;
         }
 
         /* About Section */
 
         .container{
+
             width:70%;
-            margin:60px auto;
+            margin:40px auto;
             background:white;
             padding:40px;
-            border-radius:10px;
-            box-shadow:0 0 15px gray;
+            border-radius:15px;
             text-align:center;
+            box-shadow:0 8px 20px rgba(0,0,0,.15);
+
         }
 
         h1{
-            color:#0d6efd;
+
+            color:#c48a00;
             margin-bottom:20px;
+            font-size:40px;
+
         }
 
         p{
+
+            color:#555;
             font-size:20px;
             line-height:35px;
-            color:#444;
+            margin-top:15px;
+
         }
 
         .btn{
+
             display:inline-block;
             margin-top:30px;
-            background:#0d6efd;
-            color:white;
-            padding:12px 25px;
+            background:#f7d774;
+            color:#5d4037;
+            padding:12px 28px;
             text-decoration:none;
-            border-radius:25px;
+            border-radius:30px;
             font-weight:bold;
+
         }
 
         .btn:hover{
-            background:#0047b3;
+
+            background:#f2c94c;
+
         }
 
-        /* Footer */
-
         footer{
-            background:#222;
+
+            background:#5d4037;
             color:white;
             text-align:center;
-            padding:20px;
+            padding:18px;
             position:fixed;
             bottom:0;
-            left:0;
             width:100%;
+
         }
 
     </style>
@@ -113,37 +127,59 @@
 
 <body>
 
-    <nav>
+<nav>
 
-        <h2>Django App</h2>
+    <h2>JG University</h2>
 
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
+    <ul>
 
-    </nav>
+        <li><a href="{% url 'home' %}">Home</a></li>
 
-    <div class="container">
+        <li><a href="{% url 'about' %}">About</a></li>
 
-        <h1>About Us</h1>
+        <li><a href="{% url 'student' %}">Student</a></li>
 
-        <p>
-            This website is developed using <b>HTML, CSS, Python and Django</b>.
-        </p>
+        <li><a href="{% url 'course' %}">Course</a></li>
 
-        <p>
-            It is a beginner project to learn Django Templates, URL Routing and Views.
-        </p>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
 
-        <a href="{% url 'home' %}" class="btn">Back to Home</a>
+    </ul>
 
-    </div>
+</nav>
 
-    <footer>
-        <h3>© 2026 Django Project | Made by Anjali</h3>
-    </footer>
+<div class="container">
+
+    <h1>About Us</h1>
+
+    <p>
+
+        Welcome to the <b>JG University College Portal</b>.
+
+        This portal is developed using <b>Python, Django, HTML and CSS</b>.
+
+    </p>
+
+    <p>
+
+        It helps manage Student Records, Course Details and College Information
+        with a simple and user-friendly interface.
+
+    </p>
+
+    <a href="{% url 'home' %}" class="btn">
+
+        Back to Home
+
+    </a>
+
+</div>
+
+<footer>
+
+    <h3>© 2026 JG University | Made by Anjali</h3>
+
+</footer>
 
 </body>
+
 </html>

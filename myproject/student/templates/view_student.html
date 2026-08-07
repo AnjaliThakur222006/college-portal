@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Student Detail</title>
+
+
+<style>
+
+body{
+
+font-family:Arial;
+background:#fff8dc;
+padding:40px;
+
+}
+
+
+.card{
+
+width:400px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px gray;
+
+}
+
+
+h1{
+
+text-align:center;
+color:#d4a017;
+
+}
+
+
+p{
+
+font-size:18px;
+
+}
+
+
+.btn{
+
+padding:10px 20px;
+background:#e6b800;
+color:white;
+text-decoration:none;
+border-radius:5px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+
+<h1>
+Student Details
+</h1>
+
+
+<p>
+<b>ID:</b> {{student.id}}
+</p>
+
+
+<p>
+<b>First Name:</b> {{student.first_name}}
+</p>
+
+
+<p>
+<b>Last Name:</b> {{student.last_name}}
+</p>
+
+
+<p>
+<b>Email:</b> {{student.email}}
+</p>
+
+
+<p>
+<b>Date:</b> {{student.enrollment_date}}
+</p>
+
+
+
+<a href="/update_student/{{student.id}}/" 
+class="btn">
+
+Update
+
+</a>
+
+
+</div>
+
+
+</body>
+
+</html>

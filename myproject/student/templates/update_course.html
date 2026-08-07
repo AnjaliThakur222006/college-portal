@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Update Course</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    background:#f4f7fb;
+    padding:30px;
+
+}
+
+
+.container{
+
+    width:500px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+h1{
+
+    text-align:center;
+    color:#003049;
+    margin-bottom:25px;
+
+}
+
+
+input, textarea{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+
+}
+
+
+textarea{
+
+    height:100px;
+    resize:none;
+
+}
+
+
+label{
+
+    color:#003049;
+    font-weight:bold;
+
+}
+
+
+button{
+
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    background:#005f73;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+
+button:hover{
+
+    background:#003049;
+
+}
+
+
+.back{
+
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    text-decoration:none;
+    color:#005f73;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+    Update Course
+</h1>
+
+
+
+<form method="POST">
+
+
+{% csrf_token %}
+
+
+
+<label>
+Course Name
+</label>
+
+<input 
+type="text" 
+name="name"
+value="{{course.name}}"
+required>
+
+
+
+<label>
+Description
+</label>
+
+<textarea 
+name="description"
+required>{{course.description}}</textarea>
+
+
+
+
+<label>
+Start Date
+</label>
+
+<input 
+type="date"
+name="start_date"
+value="{{course.start_date|date:'Y-m-d'}}"
+required>
+
+
+
+
+<label>
+End Date
+</label>
+
+<input 
+type="date"
+name="end_date"
+value="{{course.end_date|date:'Y-m-d'}}"
+required>
+
+
+
+
+<button type="submit">
+Update Course
+</button>
+
+
+
+</form>
+
+
+
+<a href="/course/" class="back">
+← Back to Course List
+</a>
+
+
+
+</div>
+
+
+</body>
+
+</html>
+
+
+

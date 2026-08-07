@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Add Course</title>
+
+<style>
+
+body{
+    background:#f4f7fb;
+    font-family:Arial;
+}
+
+
+.container{
+
+    width:500px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+
+h1{
+
+    text-align:center;
+    color:#003049;
+
+}
+
+
+input, textarea{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+
+}
+
+
+button{
+
+    width:100%;
+    padding:12px;
+    background:#005f73;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#003049;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>Add Course</h1>
+
+
+<form method="POST">
+
+{% csrf_token %}
+
+
+<input type="text" 
+name="name"
+placeholder="Course Name"
+required>
+
+
+
+<textarea 
+name="description"
+placeholder="Description"
+required></textarea>
+
+
+
+<label>
+Start Date
+</label>
+
+<input type="date"
+name="start_date"
+required>
+
+
+
+<label>
+End Date
+</label>
+
+<input type="date"
+name="end_date"
+required>
+
+
+
+<button type="submit">
+Save Course
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Student Details</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    background:#fffbea;
+    padding:30px;
+
+}
+
+
+/* Container */
+
+.container{
+
+    width:90%;
+    margin:auto;
+
+    background:#fffdf5;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0px 5px 15px rgba(244,196,48,0.3);
+
+}
+
+
+
+/* Heading */
+
+
+h1{
+
+    text-align:center;
+
+    color:#b8860b;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* Add Button */
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#d4a017;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:6px;
+
+    margin-bottom:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+.btn:hover{
+
+    background:#b8860b;
+
+}
+
+
+
+/* Table */
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+th,td{
+
+    border:1px solid #e5d27a;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+
+
+th{
+
+    background:#f4c430;
+
+    color:#333;
+
+}
+
+
+
+tr:hover{
+
+    background:#fff3b0;
+
+}
+
+
+
+tr:nth-child(even){
+
+    background:#fff9d6;
+
+}
+
+
+
+
+/* Action Buttons */
+
+
+.edit{
+
+    background:#198754;
+
+}
+
+
+.edit:hover{
+
+    background:#146c43;
+
+}
+
+
+
+
+.delete{
+
+    background:#dc3545;
+
+}
+
+
+.delete:hover{
+
+    background:#bb2d3b;
+
+}
+
+
+
+
+.view{
+
+    background:#0d6efd;
+
+}
+
+
+.view:hover{
+
+    background:#084298;
+
+}
+
+
+
+
+.no-data{
+
+    color:red;
+
+    font-weight:bold;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<h1>
+    Student Details
+</h1>
+
+
+
+<!-- Add Student Button -->
+
+
+<a href="/add_student/" class="btn">
+
++ Add Student
+
+</a>
+
+
+
+
+<table>
+
+
+
+<tr>
+
+<th>ID</th>
+
+<th>First Name</th>
+
+<th>Last Name</th>
+
+<th>Email</th>
+
+<th>Enrollment Date</th>
+
+<th>Action</th>
+
+</tr>
+
+
+
+
+{% for student in students %}
+
+
+
+<tr>
+
+
+<td>
+{{ student.id }}
+</td>
+
+
+<td>
+{{ student.first_name }}
+</td>
+
+
+<td>
+{{ student.last_name }}
+</td>
+
+
+<td>
+{{ student.email }}
+</td>
+
+
+<td>
+{{ student.enrollment_date }}
+</td>
+
+
+
+<td>
+
+
+<a href="/view_student/{{student.id}}/" class="btn view">
+
+View
+
+</a>
+
+
+
+<a href="/update_student/{{student.id}}/" class="btn edit">
+
+Edit
+
+</a>
+
+
+
+<a href="/delete_student/{{student.id}}/" 
+class="btn delete"
+onclick="return confirm('Are you sure?')">
+
+Delete
+
+</a>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+{% empty %}
+
+
+
+<tr>
+
+<td colspan="6" class="no-data">
+
+No Student Data Found
+
+</td>
+
+</tr>
+
+
+
+{% endfor %}
+
+
+
+</table>
+
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,173 +1,550 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Home</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<title>College Portal</title>
 
-        body{
-            background:#f4f6f9;
-        }
+<style>
 
-        nav{
-            background:#0d6efd;
-            color:white;
-            padding:15px 60px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        nav ul{
-            display:flex;
-            list-style:none;
-        }
 
-        nav ul li{
-            margin-left:20px;
-        }
+body{
+    background:#fffbea;
+}
 
-        nav ul li a{
-            color:white;
-            text-decoration:none;
-            font-weight:bold;
-        }
 
-        .hero{
-            height:90vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction:column;
-            text-align:center;
-            background:linear-gradient(to right,#0d6efd,#00b4db);
-            color:white;
-        }
+/* Navbar */
 
-        .hero h1{
-            font-size:55px;
-            margin-bottom:20px;
-        }
+nav{
 
-        .hero p{
-            font-size:20px;
-            width:70%;
-        }
+    background:#f4c430;
+    color:#333;
+    padding:15px 60px;
 
-        .btn{
-            margin-top:30px;
-            display:inline-block;
-            background:white;
-            color:#0d6efd;
-            padding:12px 30px;
-            border-radius:30px;
-            text-decoration:none;
-            font-weight:bold;
-        }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-        .features{
-            padding:60px;
-            display:flex;
-            justify-content:space-around;
-            flex-wrap:wrap;
-        }
+}
 
-        .card{
-            width:300px;
-            background:white;
-            padding:25px;
-            margin:20px;
-            border-radius:10px;
-            text-align:center;
-            box-shadow:0 0 10px rgba(0,0,0,.15);
-        }
 
-        .card h3{
-            color:#0d6efd;
-            margin-bottom:15px;
-        }
+nav h2{
 
-        footer{
-            background:#222;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:40px;
-        }
-    </style>
+    font-size:28px;
+
+}
+
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+
+}
+
+
+nav ul li{
+
+    margin-left:25px;
+
+}
+
+
+nav ul li a{
+
+    color:#333;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+
+nav ul li a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* Hero Section */
+
+
+.hero{
+
+    height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    background:linear-gradient(
+        to right,
+        #ffe680,
+        #fff3b0
+    );
+
+    color:#333;
+
+}
+
+
+.hero h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+
+
+.hero p{
+
+    font-size:20px;
+    width:70%;
+    line-height:1.6;
+
+}
+
+
+
+/* Button */
+
+
+.btn{
+
+    margin-top:30px;
+
+    display:inline-block;
+
+    background:#f4c430;
+
+    color:#333;
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.btn:hover{
+
+    background:#d4a017;
+    color:white;
+
+}
+
+
+
+
+/* Django Data Card */
+
+
+.user-card{
+
+
+    width:350px;
+
+    background:#fffdf0;
+
+    color:#333;
+
+    padding:25px;
+
+    margin-top:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(244,196,48,.4);
+
+
+}
+
+
+
+.user-card h3{
+
+
+    color:#d4a017;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.user-card p{
+
+
+    font-size:16px;
+
+    margin:8px;
+
+
+}
+
+
+
+
+.user-card ul{
+
+
+    text-align:left;
+
+    margin-left:40px;
+
+
+}
+
+
+
+
+/* Feature Section */
+
+
+.features{
+
+
+    padding:60px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+
+.card{
+
+
+    width:300px;
+
+    background:#fffdf5;
+
+    padding:25px;
+
+    margin:20px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    box-shadow:0 0 10px rgba(244,196,48,.3);
+
+
+}
+
+
+
+
+
+.card h3{
+
+
+    color:#d4a017;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+.card p{
+
+
+    color:#555;
+
+    line-height:1.5;
+
+
+}
+
+
+
+
+
+/* Footer */
+
+
+footer{
+
+
+    background:#806000;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
+
+
+}
+
+
+</style>
+
 
 </head>
+
+
 <body>
-<div class="card">
-    <h1>Welcome to Django Home Page</h1>
-    <p>This is your first Django Home Page. You can navigate to About and Contact pages using the links above.</p>
-    <p>{{data.name}}</p>
-    <p>{{data.course}}</p>
-    <p>{{data.college}}</p>
-        <ul>
-    {% for subject in subject_List %}
-        <li>{{ subject }}</li>
-    {% endfor %}
-</ul>
-</div>
+
+
+
+<!-- Navbar -->
+
 
 <nav>
 
-<h2>Django App</h2>
+
+<h2>JG University</h2>
+
 
 <ul>
-<li><a href="{% url 'home' %}">Home</a></li>
-<li><a href="{% url 'about' %}">About</a></li>
-<li><a href="{% url 'contact' %}">Contact</a></li>
+
+<li>
+<a href="/">Home</a>
+</li>
+
+
+<li>
+<a href="/about/">About</a>
+</li>
+
+
+<li>
+<a href="/student/">Student</a>
+</li>
+
+
+<li>
+<a href="/course/">Course</a>
+</li>
+
+
+<li>
+<a href="/contact/">Contact</a>
+</li>
+
+
 </ul>
+
 
 </nav>
 
+
+
+
+<!-- Hero Section -->
+
+
 <section class="hero">
 
-<h1>Welcome to Django</h1>
+
+<h1>
+Welcome To College Portal
+</h1>
+
+
 
 <p>
-Build Modern Web Applications using Python & Django Framework.
-This is your first Django Home Page.
+Manage student information, courses,
+and college activities easily with our
+digital college management system.
 </p>
 
-<a href="#" class="btn">Get Started</a>
+
+
+<a href="/student/" class="btn">
+Get Started
+</a>
+
+
+
+
+
+<!-- Django Data Display -->
+
+
+<div class="user-card">
+
+
+<h3>
+Student Information
+</h3>
+
+
+
+<p>
+Name : {{data.name}}
+</p>
+
+
+
+<p>
+Course : {{data.course}}
+</p>
+
+
+
+<p>
+College : {{data.college}}
+</p>
+
+
+
+
+<h3>
+Subjects
+</h3>
+
+
+
+<ul>
+
+
+{% for subject in subject_List %}
+
+<li>
+{{subject}}
+</li>
+
+
+{% empty %}
+
+<li>
+No Subject Available
+</li>
+
+
+{% endfor %}
+
+
+</ul>
+
+
+</div>
+
+
 
 </section>
+
+
+
+
+
+
+<!-- Feature Section -->
+
 
 <section class="features">
 
-<div class="card">
-<h3>Fast Development</h3>
-<p>Create websites quickly using Django.</p>
-</div>
+
 
 <div class="card">
-<h3>Secure</h3>
-<p>Django provides many built-in security features.</p>
+
+
+<h3>
+Student Management
+</h3>
+
+
+<p>
+View and manage student details,
+enrollment information and records.
+</p>
+
+
 </div>
 
+
+
+
+
 <div class="card">
-<h3>Easy to Learn</h3>
-<p>Perfect framework for beginners.</p>
+
+
+<h3>
+Course Management
+</h3>
+
+
+<p>
+Explore available courses,
+descriptions and course details.
+</p>
+
+
 </div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+Easy Access
+</h3>
+
+
+<p>
+Simple and user-friendly portal
+for college management.
+</p>
+
+
+</div>
+
+
 
 </section>
 
+
+
+
+
+
+<!-- Footer -->
+
+
 <footer>
 
-<h3>© 2026 Django Project | Made by Anjali</h3>
+
+<p>
+© 2026 JG University | College Portal
+</p>
+
 
 </footer>
+
+
 
 </body>
 </html>
